@@ -1,7 +1,7 @@
 
 # All software in this project is made available through the GNU GENERAL PUBLIC
 # LICENSE Version 3 (license below). GIF assets are the property of u/_Reff and
-# any commercial uses must to be negotiated with them independently.
+# any uses must to be negotiated with them independently.
 
 #------------------------------------------------------------------------------#
 # Imports
