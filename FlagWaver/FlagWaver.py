@@ -78,8 +78,19 @@ class FlagWaver():
     # Wave Flag
     #------------------------------------------------------------------------------#
 
-    # Returns the set of images in a waving flag
+    
     def wave_flag(self, flag):
+        """
+        wave_flag(flag) -> np.array
+
+        Returns the set of images in a waving flag
+
+        :param flag -- array of images of flag 
+
+        :returns -- converts flag to new colors and returns those images
+                    in an array
+
+        """
 
         # Converting the flag to a new color
         color_frames = []
@@ -133,8 +144,17 @@ class FlagWaver():
         # Returning the color frames
         return color_frames
 
-    # Loads the flag as a numpy array from a file
+    
     def load_flag(self, fname):
+        """
+        load_flag(fname) -> np.array
+
+        Loads the flag as a numpy array from a file
+
+        :param fname -- filename of image you want to load
+
+        :returns np.array of images suited for flag usage
+        """
         flag = Image.open(fname)
         flag = np.array(flag.convert('RGB').getdata(), dtype=np.uint8)\
             .reshape(flag.size[1], flag.size[0], 3)
@@ -145,6 +165,15 @@ class FlagWaver():
     #------------------------------------------------------------------------------#
 
     def create_gif(self, file_path):
+        """
+        create_gif() -> None
+
+        Creates the waving flag gif.
+
+        :param file_path -- path to the flag you want to convert into gif
+
+
+        """
         fname, name = file_path, file_path.split(os.sep)[-1].split('.')[0]
         print('Looking for file: ' + str(fname))
         flag = self.load_flag(fname)
@@ -157,7 +186,12 @@ class FlagWaver():
     #------------------------------------------------------------------------------#
 
     def imshow(self, image):
+        """
+        imshow(image) -> None
+
+        Displays image
+
+        :param image -- np.array returned from the load_flag function
+        """
         plt.imshow(image)
         plt.show()
-
-# flag_waver = FlagWaver()
