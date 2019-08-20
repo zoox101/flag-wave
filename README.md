@@ -5,13 +5,30 @@
 
 A repository containing code to automatically add arbitrary flags to u/\_Reff's flag waver. (I named him Joe)
 
-Run the code using the command `python wave_flag.py path/to/filename`.
+So I (Shahriyar Shawon) liked how this worked so I wanted to create a package for it. It is now importable to your python scripts.
 
-For example:
- * `python wave_flag.py flags/france.png`
- * `python wave_flag.py flags/belgium.png`
- * `python wave_flag.py flags/brazil.png`
- * `python wave_flag.py flags/maryland.png`
+[Link to PyPi page](https://pypi.org/project/FlagWaver/)
+
+# Installation
+ ```bash
+pip install FlagWaver
+```
+#### You will need to download the source folder [download from my GDrive](https://drive.google.com/open?id=1qKoeFYALTW03p353zuZw-cWxEPzlKvlx) along with its content and put it in the same directory as your script that will use the FlagWaver package.
+
+# Get started
+
+```python
+from FlagWaver.FlagWaver import FlagWaver
+
+GRADIENT = "source/color_flag_mask.gif"
+WHITE = "source/white_flag.gif"
+SHADOW = "source/white_flag_shadow.gif"
+
+flag_waver = FlagWaver(GRADIENT,WHITE,SHADOW)
+flag_waver.create_gif("path_to_flag_image.png")
+```
+   
+
 
 
 # License

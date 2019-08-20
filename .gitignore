@@ -1,2 +1,7 @@
 .vscode
 .DS_STORE
+__pycache__
+build
+dist
+automated_upload.sh
+FlagWaver.egg-info
